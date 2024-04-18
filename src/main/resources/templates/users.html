@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All users</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+
+</head>
+<body>
+    <h1>All users:</h1>
+    <table>
+        <tr>
+            <th>User Name</th>
+            <th>User Age</th>
+        </tr>
+        <tr th:each="u: ${users}" >
+            <td th:text="${u.name}"></td>
+            <td th:text="${u.age}"></td>
+        </tr>
+    </table>
+
+    <h2><a href="addUser">Добавить пользователя</a></h2>
+</body>
+</html>
